@@ -6,16 +6,12 @@
   "publisher": "NhanTran",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/efcore-actions"
+    "url": "https://github.com/TranNhan2004/efcore-actions"
   },
   "engines": {
     "vscode": "^1.80.0"
   },
-  "activationEvents": [
-    "onCommand:efcore.addMigration",
-    "onCommand:efcore.updateDatabase",
-    "onCommand:efcore.removeMigration"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "submenus": [
