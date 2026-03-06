@@ -1,0 +1,64 @@
+{
+  "name": "efcore-actions",
+  "displayName": "EFCore Actions",
+  "description": "A professional GUI for EF Core CLI: Add/Remove Migrations and Update Database with config persistence.",
+  "version": "1.0.0",
+  "publisher": "NhanTran",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/efcore-actions"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onCommand:efcore.addMigration",
+    "onCommand:efcore.updateDatabase",
+    "onCommand:efcore.removeMigration"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "submenus": [
+      {
+        "id": "efcore_actions",
+        "label": "EFCore Actions"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "submenu": "efcore_actions",
+          "group": "navigation"
+        }
+      ],
+      "efcore_actions": [
+        { "command": "efcore.addMigration", "group": "1_migrations@1" },
+        { "command": "efcore.updateDatabase", "group": "1_migrations@2" },
+        { "command": "efcore.removeMigration", "group": "1_migrations@3" }
+      ]
+    },
+    "commands": [
+      { "command": "efcore.addMigration", "title": "Add Migration" },
+      { "command": "efcore.updateDatabase", "title": "Update Database" },
+      { "command": "efcore.removeMigration", "title": "Remove Last Migration" }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.109.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.56.1",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
