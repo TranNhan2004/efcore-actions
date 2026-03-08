@@ -11,6 +11,7 @@
   "engines": {
     "vscode": "^1.80.0"
   },
+  "icon": "icon.png",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -28,15 +29,33 @@
         }
       ],
       "efcore_actions": [
-        { "command": "efcore.addMigration", "group": "1_migrations@1" },
-        { "command": "efcore.updateDatabase", "group": "1_migrations@2" },
-        { "command": "efcore.removeMigration", "group": "1_migrations@3" }
+        {
+          "command": "efcore.addMigration",
+          "group": "1_migrations@1"
+        },
+        {
+          "command": "efcore.updateDatabase",
+          "group": "1_migrations@2"
+        },
+        {
+          "command": "efcore.removeMigration",
+          "group": "1_migrations@3"
+        }
       ]
     },
     "commands": [
-      { "command": "efcore.addMigration", "title": "Add Migration" },
-      { "command": "efcore.updateDatabase", "title": "Update Database" },
-      { "command": "efcore.removeMigration", "title": "Remove Last Migration" }
+      {
+        "command": "efcore.addMigration",
+        "title": "Add Migration"
+      },
+      {
+        "command": "efcore.updateDatabase",
+        "title": "Update Database"
+      },
+      {
+        "command": "efcore.removeMigration",
+        "title": "Remove Last Migration"
+      }
     ]
   },
   "scripts": {
