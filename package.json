@@ -2,7 +2,7 @@
   "name": "efcore-actions",
   "displayName": "EFCore Actions",
   "description": "A professional GUI for EF Core CLI: Add/Remove Migrations and Update Database with config persistence.",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "publisher": "NhanTran",
   "repository": {
     "type": "git",

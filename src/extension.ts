@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
 
             const slnRoot = findSolutionRoot(startPath);
             if (!slnRoot) {
-				return vscode.window.showErrorMessage("No .sln file found.");
+                return vscode.window.showErrorMessage("No .sln or .slnx file found.");
 			}
 
             await vscode.window.withProgress({ location: vscode.ProgressLocation.Notification, title: `EFCore: Preparing ${type}...` }, async () => {

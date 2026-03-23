@@ -6,7 +6,7 @@ export function findSolutionRoot(startPath: string): string | null {
     let currentDir = startPath;
     while (currentDir !== path.parse(currentDir).root) {
         const files = fs.readdirSync(currentDir);
-        if (files.some(f => f.endsWith('.sln'))) {
+        if (files.some(f => f.endsWith('.sln') || f.endsWith('.slnx'))) {
             return currentDir;
         }
         currentDir = path.dirname(currentDir);
